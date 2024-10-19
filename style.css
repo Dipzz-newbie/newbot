@@ -27,9 +27,12 @@
 .border {
     display: flex;
     flex-direction: column;
+    position: fixed;
     justify-content: center;
     align-items: center;
     padding: 175px;
+    border-radius: 35px;
+    border: 1px solid black;
 }
 
 p {
@@ -60,7 +63,7 @@ p {
     cursor: pointer;
 }
 
-@media screen and (max-width:500px) {    
+@media screen and (max-width:800px) {    
     .border {
         width: 100px;
         padding: 150px;
