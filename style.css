@@ -1,0 +1,79 @@
+*, html, body {
+    padding: 0;
+    margin: 0;
+    background-color: #ffe7a6;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+    font-weight: 500;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.border {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 175px;
+    border-radius: 35px;
+    border: 1px solid black;
+}
+
+p {
+    font-size: 20px;
+    text-align: center;
+}
+
+#jawaban {
+    margin-top: 10px;
+    border: none;
+    color: black;
+    text-align: center;
+    border-bottom: 2px solid black;
+    width: 200px;
+    height: 25px;
+    outline: none;
+    font-size: 20px;
+    background-color: transparent;
+}
+
+.btn {
+    margin-top: 15px;
+    border: none;
+    width: 200px;
+    height: 25px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width:500px) {    
+    .border {
+        width: 100px;
+        padding: 150px;
+    }
+
+    p {
+        min-width: 200px;
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 20px;
+    }
+
+
+}
