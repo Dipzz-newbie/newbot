@@ -2,6 +2,10 @@ const pertanyaan = document.getElementById("pertanyaan")
 const jawaban = document.getElementById("jawaban")
 const send = document.getElementById("send")
 const restart = document.getElementById("restart")
+const background = document.getElementById("background")
+const loaders = document.getElementById("loaders")
+const container = document.getElementById("container")
+
 restart.style.display = "none"
 let init = 0;
 
@@ -37,19 +41,25 @@ function botStart() {
         jawaban.value = ''
     } else if (init === 4) {
         botDelay({ Pacar: jawaban.value })
-        jawaban.value = ''
+        jawaban.value = 'iyaa'
     } else if (init === 5) {
         finishing()
-        jawaban.value = ''
+        jawaban.value = 'dadahhh'
     } else {
         botEnd()
     }
 }
 
 function botDelay(jawabanUser) {
+    loaders.style.display = "block"
+    background.style.display = "block"
+    container.style.filter = "blur(8px)"
     setTimeout(() => {
         pertanyaan.innerHTML = botSay(jawabanUser)[init]
-    }, [100])
+        loaders.style.display = "none"
+        background.style.display = "none"
+        container.style.filter = "none"
+    }, [1000])
     userData.push(jawaban.value)
     jawaban.value - ""
 }
@@ -66,5 +76,6 @@ function botEnd() {
 }
 
 function ulang() {
+    alert(`terima kasih ${userData[0]}, telah berkunjung ke web kita!, kamu akan di arah kan ke halaman utama lagi!`)
     location.reload()
 }
